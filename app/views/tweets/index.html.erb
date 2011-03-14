@@ -1,0 +1,11 @@
+<h1>Displaying Tweets posted by @Virtue</h1>
+
+
+<% Twitter.user_timeline("Virtue").each do |tweet| %>
+	<li>
+	<%= tweet.text %>
+	</li>
+<% end %>
+<br />
+
+<h1>Post Tweet on this page to @TestingRails</h1>
