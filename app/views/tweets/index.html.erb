@@ -1,14 +1,23 @@
 <h1>Displaying Tweets posted by @Virtue</h1>
-
-
-<% Twitter.user_timeline("Virtue").each do |tweet| %>
+<% @virtue_tweets.each do |t| %>
 	<li>
-	<%= tweet.text %>
+	<%= t.text %>
 	<small>
-	<%= link_to tweet.created_at, "http://twitter.com/#!/virtue/status/"+tweet.id_str %>
+	<%= link_to t.created_at, "http://twitter.com/#!/virtue/status/"+t.id_str %>
 	</small>
 	</li>
 <% end %>
+
 <br />
 
 <h1>Post Tweet on this page to @TestingRails</h1>
+<%#= render 'form' %>
+
+<% @my_tweets.each do |t| %>
+	<li>
+	<%= t.text %>
+	<small>
+	<%= link_to t.created_at, "http://twitter.com/#!/testingrails/status/"+t.id_str %>
+	</small>
+	</li>
+<% end %>
