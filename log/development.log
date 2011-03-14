@@ -204,3 +204,796 @@ Started GET "/" for 127.0.0.1 at Sun Mar 13 17:08:23 -0700 2011
   Processing by TweetsController#index as HTML
 Rendered tweets/index.html.erb within layouts/application (703.2ms)
 Completed 200 OK in 709ms (Views: 708.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 17:37:07 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (514.0ms)
+Completed 200 OK in 520ms (Views: 519.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 17:57:02 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (627.9ms)
+Completed 200 OK in 637ms (Views: 637.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 17:58:42 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (400.0ms)
+Completed 200 OK in 410ms (Views: 409.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 17:59:56 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (445.5ms)
+Completed   in 452ms
+
+ActionView::Template::Error (undefined method `strftime' for "Fri Mar 11 15:22:22 +0000 2011":String):
+    4: <% Twitter.user_timeline("Virtue").each do |tweet| %>
+    5: 	<li>
+    6: 	<%= tweet.text %>
+    7: 	<%= tweet.created_at.strftime("Printed on %m/%d/%Y")  %>
+    8: 	</li>
+    9: <% end %>
+    10: <br />
+  app/views/tweets/index.html.erb:7:in `_app_views_tweets_index_html_erb__155582460_18620250_0'
+  app/views/tweets/index.html.erb:4:in `each'
+  app/views/tweets/index.html.erb:4:in `_app_views_tweets_index_html_erb__155582460_18620250_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:25:00 -0700 2011
+  Processing by TweetsController#index as HTML
+ERROR: compiling _app_views_tweets_index_html_erb__155582460_19625570_0 RAISED compile error
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:11: unmatched ): /li>
+'); end 
+@output_buffer.safe_concat('<br /
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:13: syntax error, unexpected '<'
+<% link_to :
+ ^
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:13: syntax error, unexpected ':', expecting ')'
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting kDO or '{' or '('
+<h1>Post Tweet on this page to @TestingRails...
+              ^
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:15: unterminated string meets end of file
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:15: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR
+Function body:           def _app_views_tweets_index_html_erb__155582460_19625570_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "tweets/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Displaying Tweets posted by @Virtue</h1>
+
+
+');@output_buffer.append_if_string=  Twitter.user_timeline("Virtue").each do |tweet| 
+@output_buffer.safe_concat('	<li>
+	');@output_buffer.append= ( tweet.text );@output_buffer.safe_concat('
+');	 d = DateTime.strptime '12:06 AM Oct 15th', '%H:%M %p %b %d' 
+@output_buffer.safe_concat('	');@output_buffer.append= ( tweet.created_at#.strftime("Printed on %m/%d/%Y")  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</li>
+'); end 
+@output_buffer.safe_concat('<br />
+
+<% link_to :
+
+<h1>Post Tweet on this page to @TestingRails</h1>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:15:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:59:in `_render_template'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__636654642__process_action__662920150__callbacks'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/opt/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/opt/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/opt/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:77:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands/server.rb:65:in `start'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:30
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:27:in `tap'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered tweets/index.html.erb within layouts/application (1.0ms)
+Completed   in 7ms
+
+ActionView::Template::Error (compile error
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:11: unmatched ): /li>
+'); end 
+@output_buffer.safe_concat('<br /
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:13: syntax error, unexpected '<'
+<% link_to :
+ ^
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:13: syntax error, unexpected ':', expecting ')'
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting kDO or '{' or '('
+<h1>Post Tweet on this page to @TestingRails...
+              ^
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:15: unterminated string meets end of file
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:15: syntax error, unexpected tSTRING_END, expecting tSTRING_CONTENT or tREGEXP_END or tSTRING_DBEG or tSTRING_DVAR):
+    8: 	<%= tweet.created_at#.strftime("Printed on %m/%d/%Y")  %>
+    9: 	</li>
+    10: <% end %>
+    11: <br />
+    12: 
+    13: <% link_to :
+    14: 
+  app/views/tweets/index.html.erb:15:in `compile'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:25:10 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (1783.3ms)
+Completed 200 OK in 1790ms (Views: 1789.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:29:01 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (559.5ms)
+Completed   in 566ms
+
+ActionView::Template::Error (invalid date):
+    4: <% Twitter.user_timeline("Virtue").each do |tweet| %>
+    5: 	<li>
+    6: 	<%= tweet.text %>
+    7: 	<% d = DateTime.strptime tweet.created_at, '%w %m %d %H:%M' %>
+    8: 	<%= d.to_s.strftime("Printed on %m/%d/%Y")  %>
+    9: 	</li>
+    10: <% end %>
+  app/views/tweets/index.html.erb:7:in `_app_views_tweets_index_html_erb__155582460_18194430_0'
+  app/views/tweets/index.html.erb:4:in `each'
+  app/views/tweets/index.html.erb:4:in `_app_views_tweets_index_html_erb__155582460_18194430_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:34:28 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (379.2ms)
+Completed   in 386ms
+
+ActionView::Template::Error (invalid date):
+    4: <% Twitter.user_timeline("Virtue").each do |tweet| %>
+    5: 	<li>
+    6: 	<%= tweet.text %>
+    7: 	<% d = DateTime.strptime tweet.created_at, '%w %b %d %H:%M' %>
+    8: 	<%= d.to_s.strftime("Printed on %m/%d/%Y")  %>
+    9: 	</li>
+    10: <% end %>
+  app/views/tweets/index.html.erb:7:in `_app_views_tweets_index_html_erb__155582460_19251650_0'
+  app/views/tweets/index.html.erb:4:in `each'
+  app/views/tweets/index.html.erb:4:in `_app_views_tweets_index_html_erb__155582460_19251650_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:37:29 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (400.4ms)
+Completed   in 406ms
+
+ActionView::Template::Error (invalid date):
+    4: <% Twitter.user_timeline("Virtue").each do |tweet| %>
+    5: 	<li>
+    6: 	<%= tweet.text %>
+    7: 	<% d = DateTime.strptime tweet.created_at, '%w %b %d %H:%M ' %>
+    8: 	<%= d.to_s.strftime("Printed on %m/%d/%Y")  %>
+    9: 	</li>
+    10: <% end %>
+  app/views/tweets/index.html.erb:7:in `_app_views_tweets_index_html_erb__155582460_18121840_0'
+  app/views/tweets/index.html.erb:4:in `each'
+  app/views/tweets/index.html.erb:4:in `_app_views_tweets_index_html_erb__155582460_18121840_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (65.3ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (72.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:49:03 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (492.1ms)
+Completed   in 499ms
+
+ActionView::Template::Error (invalid date):
+    4: <% Twitter.user_timeline("Virtue").each do |tweet| %>
+    5: 	<li>
+    6: 	<%= tweet.text %>
+    7: 	<% d = DateTime.strptime tweet.created_at, '%w %b %d %H:%M:%S  ' %>
+    8: 	<%= d.to_s.strftime("Printed on %m/%d/%Y")  %>
+    9: 	</li>
+    10: <% end %>
+  app/views/tweets/index.html.erb:7:in `_app_views_tweets_index_html_erb__155582460_19521400_0'
+  app/views/tweets/index.html.erb:4:in `each'
+  app/views/tweets/index.html.erb:4:in `_app_views_tweets_index_html_erb__155582460_19521400_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:49:21 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (370.6ms)
+Completed 200 OK in 378ms (Views: 377.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:49:49 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (368.2ms)
+Completed 200 OK in 374ms (Views: 374.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:50:01 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (359.3ms)
+Completed   in 365ms
+
+ActionView::Template::Error (invalid date):
+    4: <% Twitter.user_timeline("Virtue").each do |tweet| %>
+    5: 	<li>
+    6: 	<%= tweet %>
+    7: 	<% d = DateTime.strptime tweet.created_at, '%w %b %d %H:%M:%S  ' %>
+    8: 	<%= d.to_s.strftime("Printed on %m/%d/%Y")  %>
+    9: 	</li>
+    10: <% end %>
+  app/views/tweets/index.html.erb:7:in `_app_views_tweets_index_html_erb__155582460_18593600_0'
+  app/views/tweets/index.html.erb:4:in `each'
+  app/views/tweets/index.html.erb:4:in `_app_views_tweets_index_html_erb__155582460_18593600_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (67.5ms)
+
+
+Started GET "/tweets.xml" for 127.0.0.1 at Sun Mar 13 18:50:02 -0700 2011
+
+ActionController::RoutingError (No route matches "/tweets.xml"):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/tweets.xml" for 127.0.0.1 at Sun Mar 13 18:50:11 -0700 2011
+
+ActionController::RoutingError (No route matches "/tweets.xml"):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/tweets.xml" for 127.0.0.1 at Sun Mar 13 18:50:13 -0700 2011
+
+ActionController::RoutingError (No route matches "/tweets.xml"):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:50:16 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (440.5ms)
+Completed 200 OK in 447ms (Views: 446.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:51:53 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (451.9ms)
+Completed   in 458ms
+
+ActionView::Template::Error (invalid date):
+    4: <% Twitter.user_timeline("Virtue").each do |tweet| %>
+    5: 	<li>
+    6: 	<%= tweet %>
+    7: 	<% d = DateTime.strptime tweet.created_at, '%w %b %d %H:%M:%S % %Y ' %>
+    8: 	<%= d.to_s.strftime("Printed on %m/%d/%Y")  %>
+    9: 	</li>
+    10: <% end %>
+  app/views/tweets/index.html.erb:7:in `_app_views_tweets_index_html_erb__155582460_18209340_0'
+  app/views/tweets/index.html.erb:4:in `each'
+  app/views/tweets/index.html.erb:4:in `_app_views_tweets_index_html_erb__155582460_18209340_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:53:28 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (380.9ms)
+Completed   in 387ms
+
+ActionView::Template::Error (invalid date):
+    4: <% Twitter.user_timeline("Virtue").each do |tweet| %>
+    5: 	<li>
+    6: 	<%= tweet %>
+    7: 	<% d = DateTime.strptime(tweet.created_at, '%w %b %d %H:%M:%S % %Y ') %>
+    8: 	<%= d.to_s.strftime("Printed on %m/%d/%Y")  %>
+    9: 	</li>
+    10: <% end %>
+  app/views/tweets/index.html.erb:7:in `_app_views_tweets_index_html_erb__155582460_19206200_0'
+  app/views/tweets/index.html.erb:4:in `each'
+  app/views/tweets/index.html.erb:4:in `_app_views_tweets_index_html_erb__155582460_19206200_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:56:55 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (642.6ms)
+Completed   in 649ms
+
+ActionView::Template::Error (invalid date):
+    4: <% Twitter.user_timeline("Virtue").each do |tweet| %>
+    5: 	<li>
+    6: 	<%= tweet %>
+    7: 	<% d = DateTime.strptime(tweet.created_at, '%w %b %d %H:%M:%S % %Y ') %>
+    8: 	<%= d.to_s %>
+    9: 	</li>
+    10: <% end %>
+  app/views/tweets/index.html.erb:7:in `_app_views_tweets_index_html_erb__155582460_18078490_0'
+  app/views/tweets/index.html.erb:4:in `each'
+  app/views/tweets/index.html.erb:4:in `_app_views_tweets_index_html_erb__155582460_18078490_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (79.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (86.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 18:57:46 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (368.0ms)
+Completed 200 OK in 375ms (Views: 374.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:03:44 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (492.7ms)
+Completed 200 OK in 499ms (Views: 498.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/www.twitter.com/" for 127.0.0.1 at Sun Mar 13 19:03:49 -0700 2011
+
+ActionController::RoutingError (No route matches "/www.twitter.com"):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:03:51 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (392.4ms)
+Completed 200 OK in 399ms (Views: 398.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:04:04 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (409.6ms)
+Completed   in 423ms
+
+ActionView::Template::Error (undefined method `redirect_to' for #<#<Class:0x2314a3c>:0x2313c2c>):
+    4: <% Twitter.user_timeline("Virtue").each do |tweet| %>
+    5: 	<li>
+    6: 	<%= tweet %>
+    7: 	<%= redirect_to tweet.created_at, "www.twitter.com/#!/virtue/status/"+tweet.id_str %>
+    8: 	</li>
+    9: <% end %>
+    10: <br />
+  app/views/tweets/index.html.erb:7:in `_app_views_tweets_index_html_erb__155582460_18388900_0'
+  app/views/tweets/index.html.erb:4:in `each'
+  app/views/tweets/index.html.erb:4:in `_app_views_tweets_index_html_erb__155582460_18388900_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:04:13 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (467.6ms)
+Completed 200 OK in 474ms (Views: 473.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:04:29 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (392.0ms)
+Completed 200 OK in 399ms (Views: 398.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:11:23 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (343.5ms)
+Completed 200 OK in 350ms (Views: 349.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:12:09 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (419.4ms)
+Completed 200 OK in 427ms (Views: 426.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:12:26 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (381.6ms)
+Completed 200 OK in 397ms (Views: 396.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:12:35 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (394.5ms)
+Completed 200 OK in 401ms (Views: 400.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:13:13 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (365.0ms)
+Completed 200 OK in 373ms (Views: 372.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:13:20 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (357.7ms)
+Completed 200 OK in 364ms (Views: 363.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:13:35 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (401.3ms)
+Completed 200 OK in 408ms (Views: 407.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:14:00 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (426.4ms)
+Completed 200 OK in 433ms (Views: 432.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/www.twitter.com/" for 127.0.0.1 at Sun Mar 13 19:14:09 -0700 2011
+
+ActionController::RoutingError (No route matches "/www.twitter.com"):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:14:10 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (318.1ms)
+Completed 200 OK in 324ms (Views: 323.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:15:17 -0700 2011
+  Processing by TweetsController#index as HTML
+ERROR: compiling _app_views_tweets_index_html_erb__155582460_19592420_0 RAISED compile error
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:8: syntax error, unexpected '<', expecting ')'
+...irtue/status/"+tweet.id_str; <http://www.twitter.com> );@out...
+                              ^
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:8: syntax error, unexpected ')'
+...tr; <http://www.twitter.com> );@output_buffer.safe_concat('
+                              ^
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:11: syntax error, unexpected kEND, expecting ')'
+'); end 
+       ^
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:15: syntax error, unexpected kENSURE, expecting ')'
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:17: syntax error, unexpected kEND, expecting ')'
+Function body:           def _app_views_tweets_index_html_erb__155582460_19592420_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "tweets/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Displaying Tweets posted by @Virtue</h1>
+
+
+');@output_buffer.append_if_string=  Twitter.user_timeline("Virtue").each do |tweet| 
+@output_buffer.safe_concat('	<li>
+	');@output_buffer.append= ( tweet.text );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	<small>
+	');@output_buffer.append= ( link_to tweet.created_at, "www.twitter.com/#!/virtue/status/"+tweet.id_str; <http://www.twitter.com> );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</small>
+	</li>
+'); end 
+@output_buffer.safe_concat('<br />
+
+<h1>Post Tweet on this page to @TestingRails</h1>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:17:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:59:in `_render_template'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__636654642__process_action__662920150__callbacks'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/opt/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/opt/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/opt/local/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:77:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/Users/treylawrence/.gem/ruby/1.8/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands/server.rb:65:in `start'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:30
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:27:in `tap'
+/opt/local/lib/ruby/gems/1.8/gems/railties-3.0.5/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered tweets/index.html.erb within layouts/application (0.9ms)
+Completed   in 7ms
+
+ActionView::Template::Error (compile error
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:8: syntax error, unexpected '<', expecting ')'
+...irtue/status/"+tweet.id_str; <http://www.twitter.com> );@out...
+                              ^
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:8: syntax error, unexpected ')'
+...tr; <http://www.twitter.com> );@output_buffer.safe_concat('
+                              ^
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:11: syntax error, unexpected kEND, expecting ')'
+'); end 
+       ^
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:15: syntax error, unexpected kENSURE, expecting ')'
+/Users/treylawrence/Work/twitter_app/app/views/tweets/index.html.erb:17: syntax error, unexpected kEND, expecting ')'):
+    5: 	<li>
+    6: 	<%= tweet.text %>
+    7: 	<small>
+    8: 	<%= link_to tweet.created_at, "www.twitter.com/#!/virtue/status/"+tweet.id_str; <http://www.twitter.com> %>
+    9: 	</small>
+    10: 	</li>
+    11: <% end %>
+  app/views/tweets/index.html.erb:17:in `compile'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/tweets.xml" for 127.0.0.1 at Sun Mar 13 19:16:45 -0700 2011
+
+ActionController::RoutingError (No route matches "/tweets.xml"):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/tweets.xml" for 127.0.0.1 at Sun Mar 13 19:16:47 -0700 2011
+
+ActionController::RoutingError (No route matches "/tweets.xml"):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:16:49 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (423.3ms)
+Completed 200 OK in 430ms (Views: 429.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:16:57 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (397.6ms)
+Completed 200 OK in 404ms (Views: 403.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:17:42 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (408.4ms)
+Completed 200 OK in 415ms (Views: 414.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:17:48 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (364.4ms)
+Completed 200 OK in 371ms (Views: 370.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:18:01 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (348.2ms)
+Completed 200 OK in 354ms (Views: 354.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:18:51 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (430.2ms)
+Completed 200 OK in 508ms (Views: 507.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:19:00 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (365.2ms)
+Completed 200 OK in 371ms (Views: 371.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:25:31 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (399.0ms)
+Completed 200 OK in 408ms (Views: 407.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 13 19:25:35 -0700 2011
+  Processing by TweetsController#index as HTML
+Rendered tweets/index.html.erb within layouts/application (393.4ms)
+Completed 200 OK in 400ms (Views: 399.5ms | ActiveRecord: 0.0ms)

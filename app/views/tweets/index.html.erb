@@ -4,6 +4,9 @@
 <% Twitter.user_timeline("Virtue").each do |tweet| %>
 	<li>
 	<%= tweet.text %>
+	<small>
+	<%= link_to tweet.created_at, "http://twitter.com/#!/virtue/status/"+tweet.id_str %>
+	</small>
 	</li>
 <% end %>
 <br />
