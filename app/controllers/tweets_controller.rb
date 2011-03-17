@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
 	def index
-		@virtue_tweets = Twitter.user_timeline("Virtue")
+		@virtue_tweets = Twitter.user_timeline("Vitrue")
 		@my_tweets = Twitter.user_timeline("TestingRails")
 
 		#@tweet = Tweet.new(params[:tweet])
